@@ -9,7 +9,7 @@ test("Exercise 3: Complete a Registration Form", async ({page}) => {
     await page.locator("#lastName").fill("Podraza");
 
     //Select dropdown option
-    await page.locator("#country").selectOption("us");
+    await page.locator("#country").selectOption("us"); //value
 
     //Check checkboxes
     await page.locator("#newsletter").check();

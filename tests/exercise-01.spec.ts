@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test"
 
-test("Exercics 1: Automate a Login Form", async ({page}) => {
+test("Exercise 1: Automate a Login Form", async ({page}) => {
     await page.goto("/module-2/exercise-1");
 
     //Fill in correct credentials

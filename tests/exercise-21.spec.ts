@@ -8,12 +8,14 @@ test("Exercise 21: Work with Multiple Tabs", async ({page, context}) => {
 
     //Click the link that opens in new tab
     await page.locator("#new-tab-link").click();
+    await page.waitForTimeout(5000);
 
     const newPage = await pagePromise;
     await newPage.waitForLoadState();
 
     //Verify we are on the new page
     await expect(newPage).toHaveTitle(/Playwright/)
+    await page.waitForTimeout(5000);
 
     //We can close the new page
     await newPage.close();

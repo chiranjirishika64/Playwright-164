@@ -15,7 +15,7 @@ test("Exercise 6: Filter Products by Category", async ({page}) => {
 
     // Verify only Gaming products are shown 
      await expect(productCards).toHaveCount(2);
-
+   
      const count = await productCategories.count();
      for(let i = 0; i < count; i++) {
         await expect(productCategories.nth(i)).toHaveText("Gaming");
